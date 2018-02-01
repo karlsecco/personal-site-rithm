@@ -14,7 +14,7 @@ html {
   background: url(unimpressed.jpg);
   background-position: center;  
   background-repeat: no-repeat;
-  background-attachment: fixed, scroll;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -22,7 +22,7 @@ html {
   background: url(coffee.jpg);
   background-position: 50% 80%;
   background-repeat: no-repeat;
-  background-attachment: fixed, scroll;
+  background-attachment: fixed;;
   background-size: cover;
 }
 
@@ -30,7 +30,7 @@ html {
   background: url(growth.jpg);
   background-position: 50% 90%;
   background-repeat: no-repeat;
-  background-attachment: fixed, scroll;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -42,13 +42,21 @@ html {
   background-color: rgba(210,175,125,0.3)!important;
 }
 
+.navbar-brand,
+.nav-i-brand {
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+
 .navbar-brand {
-  margin-left: 15px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
-  font-weight: 700;
-  font-size: 1.875rem;
+}
+
+.nav-i-brand {
+  margin-left: 15px;
+  color: aliceblue;
 }
 
 .navbar-light .navbar-brand {
@@ -115,8 +123,8 @@ html {
 //////////////////////////////////////////////////*/
 
 #landing h1 {
-  margin-top: 20%;
-  margin-bottom: 10px;
+  margin-top: 7.5rem;
+  margin-bottom: 20px;
   color: aliceblue;
   font-weight: 700;
   font-size: 3rem;
@@ -124,15 +132,9 @@ html {
                1px 3px 6px rgba(0,0,0,0.3);
 }
 
-#intro-col {
-  margin: 10px 0 10px 0;
-  padding: 10px;
-  min-width: 23.13rem;
-  max-width: 23.13rem;
-}
-
 #landing h5 {
-  min-width: 21.88rem;
+  max-width: 21.5rem;
+  margin-bottom: 20px;
   padding: 20px;
   background: rgba(240,248,255,0.8);
   border-radius: 10px;
@@ -175,6 +177,7 @@ hr {
   margin-top: 20px;
   padding: 8px;
   background: aliceblue;
+  border: 1px solid rgba(210,175,125,0.3);
   box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
   color: rgba(0,0,0,0.8);
   font-size: 1.25rem;
