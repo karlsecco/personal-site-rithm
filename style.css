@@ -1,0 +1,246 @@
+/*//////////////////////////////////////////////////
+  body
+//////////////////////////////////////////////////*/
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  color: rgba(0,0,0,0.8);
+  font-family: 'Roboto', sans-serif;
+}
+
+.index-bg body {
+  background: url(unimpressed.jpg);
+  background-position: center;  
+  background-repeat: no-repeat;
+  background-attachment: fixed, scroll;
+  background-size: cover;
+}
+
+.about-bg body {
+  background: url(coffee.jpg);
+  background-position: 50% 80%;
+  background-repeat: no-repeat;
+  background-attachment: fixed, scroll;
+  background-size: cover;
+}
+
+.contact-bg body {
+  background: url(growth.jpg);
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  background-attachment: fixed, scroll;
+  background-size: cover;
+}
+
+/*//////////////////////////////////////////////////
+  nav
+//////////////////////////////////////////////////*/
+
+.bg-light {
+  background-color: rgba(210,175,125,0.3)!important;
+}
+
+.navbar-brand {
+  margin-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+
+.navbar-light .navbar-brand {
+  transition: background .2s,
+              box-shadow .2s,
+              color .2s;
+}
+
+.navbar-light .navbar-nav .nav-link,
+#disabled3,
+#github,
+#email,
+#resume {
+  padding-left: 10px;
+  background: aliceblue;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9375rem;
+  transition: background .2s,
+              box-shadow .2s,
+              color .2s;
+}
+
+#dropdown {
+  background-color: aliceblue!important;
+  padding: 5px;
+  border: none;
+  border-radius: 0;
+}
+
+.nav-i {
+  padding-right: 2px;
+}
+
+#disabled3 {
+  color: rgba(0,0,0,0.3);
+}
+
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+  background: #f86161;
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+  color: aliceblue;
+}
+
+#disabled1:hover,
+#disabled2:hover,
+#disabled3:hover {
+  background: aliceblue;
+  box-shadow: none;
+  color: rgba(0,0,0,0.3);
+  cursor: not-allowed;
+}
+
+#github:hover,
+#email:hover,
+#resume:hover {
+  background: #f86161;
+  color: aliceblue;
+  font-size: 0.9375rem;
+}
+
+/*//////////////////////////////////////////////////
+  landing
+//////////////////////////////////////////////////*/
+
+#landing h1 {
+  margin-top: 20%;
+  margin-bottom: 10px;
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 3rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6),
+               1px 3px 6px rgba(0,0,0,0.3);
+}
+
+#intro-col {
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  min-width: 23.13rem;
+  max-width: 23.13rem;
+}
+
+#landing h5 {
+  min-width: 21.88rem;
+  padding: 20px;
+  background: rgba(240,248,255,0.8);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.375rem;
+}
+
+hr {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 1px;
+  border: 0;
+  background: lightgray;
+  background-image: linear-gradient(to right, rgba(210,175,125,0.3), #f86161, rgba(210,175,125,0.3));
+}
+
+#landing #rithm,
+#about a,
+#contact a {
+  padding: 1px 4px;
+  border-radius: 5px;
+  color: #f86161;
+  transition: background .2s,
+              box-shadow .2s,
+              color .2s,
+              text-shadow .2s;
+}
+
+#landing #rithm:hover,
+#about a:hover,
+#contact a:hover {
+  background: #f86161;
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+  color: aliceblue;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+#landing .btn-default {
+  margin-top: 20px;
+  padding: 8px;
+  background: aliceblue;
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+  color: rgba(0,0,0,0.8);
+  font-size: 1.25rem;
+  transition: background .2s,
+              color .2s;
+}
+
+#landing .btn-default:hover {
+  padding: 8px 7px;
+  background: #f86161;
+  color: aliceblue;
+}
+
+#kitty,
+#landing .btn-default:hover #karl {
+  display: none;
+}
+
+#landing .btn-default:hover #kitty {
+  display: inline;
+}
+
+/*//////////////////////////////////////////////////
+  about & contact
+//////////////////////////////////////////////////*/
+
+#about h1,
+#contact h1 {
+  margin-top: 7.5rem;
+  color: rgba(247,86,87,0.8);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+#about hr,
+#contact hr {
+  margin-top: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#about img,
+#contact img {
+  margin-top: 1rem;
+  margin-bottom: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid rgba(210,175,125,0.3);
+  border-radius: 10px;
+}
+
+#about p,
+#about li,
+#contact p {
+  color: rgba(0,0,0,0.8);
+}
+
+#about a,
+#contact a {
+  display: inline-block;
+}
+
+#about article,
+#contact article {
+  padding: 30px 30px 10px 30px;
+  margin-bottom: 20px;
+  background: rgba(240,248,255,0.8);
+  border-radius: 10px;
+}
