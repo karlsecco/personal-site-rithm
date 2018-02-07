@@ -19,10 +19,18 @@ html {
 }
 
 .about-bg body {
-  background: url(coffee.jpg);
+  background: url(grind.jpg);
   background-position: 50% 80%;
   background-repeat: no-repeat;
   background-attachment: fixed;;
+  background-size: cover;
+}
+
+.meme-bg body {
+  background: url(memeow.jpg);
+  background-position: 50% 95%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -101,7 +109,6 @@ html {
   color: aliceblue;
 }
 
-#disabled1:hover,
 #disabled2:hover,
 #disabled3:hover {
   background: aliceblue;
@@ -153,7 +160,8 @@ hr {
 
 #landing #rithm,
 #about a,
-#contact a {
+#contact a,
+#meme #generate {
   padding: 1px 4px;
   border-radius: 5px;
   color: #f86161;
@@ -205,7 +213,8 @@ hr {
 //////////////////////////////////////////////////*/
 
 #about h1,
-#contact h1 {
+#contact h1,
+#meme h1 {
   margin-top: 7.5rem;
   color: rgba(247,86,87,0.8);
   font-weight: 700;
@@ -213,14 +222,16 @@ hr {
 }
 
 #about hr,
-#contact hr {
+#contact hr,
+#meme hr {
   margin-top: 0;
   margin-left: 5px;
   margin-right: 5px;
 }
 
 #about img,
-#contact img {
+#contact img,
+#meme .col-md-4 img {
   margin-top: 1rem;
   margin-bottom: 20px;
   max-width: 100%;
@@ -241,11 +252,142 @@ hr {
 }
 
 #about article,
-#contact article {
+#contact article,
+#meme-form {
   padding: 30px 30px 10px 30px;
   margin-bottom: 20px;
   background: rgba(240,248,255,0.8);
   border-bottom: 1px solid rgba(247,86,87,0.2);
   border-right: 1px solid rgba(247,86,87,0.1);
   border-radius: 10px;
+}
+
+/*//////////////////////////////////////////////////
+  meme
+//////////////////////////////////////////////////*/
+
+#meme-form label {
+  color: rgba(0,0,0,0.8);
+}
+
+#meme-form input::placeholder,
+#meme-form p,
+#meme-form li {
+  color: rgba(0,0,0,0.3);
+}
+
+#meme #generate {
+  padding: 8px;
+  background: aliceblue;
+  border: 1px solid rgba(210,175,125,0.3);
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+  color: rgba(0,0,0,0.8);
+  font-size: 1rem;
+  transition: background .2s,
+              color .2s;
+}
+
+#meme #generate:hover {
+  background: #f86161;
+  color: aliceblue;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+#meme-form hr {
+  margin-top: 1.5rem;
+}
+
+#meme-container {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+/*meme.js classes*/
+
+.meme-div {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  width: 48%;
+  min-width: 340px;
+  background: white;
+  border: 1px solid rgba(210,175,125,0.3);
+  border-radius: 5px;
+}
+
+.meme-img {
+  width: 100%;
+  border-radius: 5px;
+  color: #f86161;
+  font-size: 16px;
+}
+
+.meme-img:before {
+  content: '\A\A\A\A\A\A Your link is bad\A';
+  white-space: pre;
+}
+
+.meme-img:after {
+  content: '\A And you should feel bad\A\A\A\A\A\A\A';
+  white-space: pre;
+  word-wrap: break-word;
+}
+
+.row1,
+.row2 {
+  position: absolute;
+  width: 100%;
+  padding: 3px 1px;
+  word-wrap: break-word;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black,
+               1px -1px 1px black,
+              -1px 1px 1px black,
+              -1px -1px 1px black;
+}
+
+.row1 {
+  top: 0;
+}
+
+.row2 {
+  bottom: 0;
+}
+
+.delete-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background: rgba(247,86,87,0.3);
+  border-radius: 5px;
+  border: none;
+  color: rgba(0,0,0,0.8);
+  font-size: 100px;
+  cursor: pointer;
+}
+
+.meme-div:hover > .delete-btn {
+  display: block;
+}
+
+.meme-div:hover > img,
+.meme-div:hover > div {
+  opacity: 0.1;
+}
+
+.meme-div:hover > button {
+  width: 100%;
+  height: 100%;
+}
+
+.meme-div:hover {
+  border: 1px solid white;
 }
