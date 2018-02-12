@@ -1,5 +1,8 @@
 var generateBtn = document.querySelector('#generate');
 var memeContainer = document.querySelector('#meme-container');
+var imgURLInput = document.querySelector('form')[0];
+var topTextInput = document.querySelector('form')[1];
+var botTextInput = document.querySelector('form')[2];
 
 function createMeme() {
 	var memeDiv = document.createElement('div');
@@ -62,4 +65,37 @@ generateBtn.addEventListener('click', function(event) {
 	event.preventDefault(); // prevents click from reloading page
 	createMeme();
 	document.querySelector('#meme-form form').reset(); // resets form inputs to placeholders
+	document.querySelector('#meme-container').scrollIntoView({behavior: 'smooth', block: 'end'});
+});
+
+// auto-populate form on thumbnail click
+document.querySelector('#success-kid').addEventListener('click', function() {
+	imgURLInput.value = 'https://imgflip.com/s/meme/Success-Kid.jpg';
+	topTextInput.value = 'Success Kid';
+	botTextInput.value = '';
+});
+document.querySelector('#grumpy-cat').addEventListener('click', function() {
+	imgURLInput.value = 'https://imgflip.com/s/meme/Grumpy-Cat.jpg';
+	topTextInput.value = 'Grumpy Cat';
+	botTextInput.value = '';
+});
+document.querySelector('#one-simply').addEventListener('click', function() {
+	imgURLInput.value = 'https://imgflip.com/s/meme/One-Does-Not-Simply.jpg';
+	topTextInput.value = 'One Does Not Simply';
+	botTextInput.value = '';
+});
+document.querySelector('#salt-bae').addEventListener('click', function() {
+	imgURLInput.value = 'https://media1.popsugar-assets.com/files/thumbor/yXlp640Tn-VxbxP-vaiI2NKZjxA/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/01/09/880/n/1922507/17b90c6d5873edb1231823.18767920_edit_img_image_18019874_1483991626/i/What-Salt-Bae-Meme.jpg';
+	topTextInput.value = 'Salt Bae';
+	botTextInput.value = '';
+});
+document.querySelector('#philosoraptor').addEventListener('click', function() {
+	imgURLInput.value = 'https://imgflip.com/s/meme/Philosoraptor.jpg';
+	topTextInput.value = 'Philosoraptor';
+	botTextInput.value = '';
+});
+document.querySelector('#jackie-chan').addEventListener('click', function() {
+	imgURLInput.value = 'https://imgflip.com/s/meme/Jackie-Chan-WTF.jpg';
+	topTextInput.value = 'Jackie Chan Why';
+	botTextInput.value = '';
 });

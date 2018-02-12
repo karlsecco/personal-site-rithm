@@ -85,41 +85,45 @@
 					<section class="col-md-8">
 						<hr>
 						<div id="meme-form" class="container">
-						  <form>
-						    <div class="form-group row">
-						      <label for="img-url" class="col-sm-3 col-form-label">Image URL:</label>
-						      <div class="col-sm-9">
-						        <input type="text" class="form-control" id="img-url" placeholder="e.g. http://www.karlsecco.com/karl.jpg">
-						      </div>
-						    </div>
-						    <div class="form-group row">
-						      <label for="top-text" class="col-sm-3 col-form-label">Top Caption:</label>
-						      <div class="col-sm-9">
-						        <input type="text" class="form-control" id="top-text" maxlength="60" placeholder="text to appear on top half of image">
-						      </div>
-						    </div>
-						    <div class="form-group row">
-						      <label for="bot-text" class="col-sm-3 col-form-label">Bottom Caption:</label>
-						      <div class="col-sm-9">
-						        <input type="text" class="form-control" id="bot-text" maxlength="60" placeholder="text to appear on bottom half of image">
-						      </div>
-						    </div>
-						    <div class="form-group row">
-						      <div class="offset-sm-3 col-sm-9">
-						        <button id="generate" class="btn btn-default">Make Meme!</button>
-						      </div>	
-						    </div>
-						    <hr>
-						        <p>This generator accounts for:</p>
-						        <ul>
-						        	<li>No image URL entered</li>
-						        	<li>No caption entered</li>
-						        	<li>Broken image URLs</li>
-						        </ul>
-						  </form>
+							<form>
+								<p>This generator accounts for omitting an image URL, leaving both caption inputs empty, and broken image addresses. Submit blank or partial forms to test these conditions or select a thumbnail to automatically populate the form. Multiple memes can be displayed below, and anything that's not funny can be deleted by hovering over the image. Have fun!</p>
+								<div class="form-group row">
+									<label for="img-url" class="col-xl-3 col-form-label">Image URL:</label>
+									<div class="col-xl-9">
+										<input type="text" class="form-control" id="img-url" placeholder="e.g. http://www.karlsecco.com/karl.jpg">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="top-text" class="col-xl-3 col-form-label">Top Caption:</label>
+									<div class="col-xl-9">
+										<input type="text" class="form-control" id="top-text" maxlength="60" placeholder="text to appear on top half of image">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="bot-text" class="col-xl-3 col-form-label">Bottom Caption:</label>
+									<div class="col-xl-9">
+										<input type="text" class="form-control" id="bot-text" maxlength="60" placeholder="text to appear on bottom half of image">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="offset-xl-3 col-xl-9">
+										<button id="generate" class="btn btn-default">Make Meme!</button>
+									</div>  
+								</div>
+								<hr>
+								<div id="thumnails" class="row no-gutters">
+									<div class="col-lg-12">
+											<img id="success-kid" src="https://imgflip.com/s/meme/Success-Kid.jpg" alt="Success Kid meme">
+											<img id="one-simply" src="https://imgflip.com/s/meme/One-Does-Not-Simply.jpg" alt="One Does Not Simply meme">
+											<img id="grumpy-cat" src="https://imgflip.com/s/meme/Grumpy-Cat.jpg" att="Grumpy Cat meme">
+											<img id="salt-bae" src="https://media1.popsugar-assets.com/files/thumbor/yXlp640Tn-VxbxP-vaiI2NKZjxA/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/01/09/880/n/1922507/17b90c6d5873edb1231823.18767920_edit_img_image_18019874_1483991626/i/What-Salt-Bae-Meme.jpg" alt="Satl Bae meme">
+											<img id="philosoraptor" src="https://imgflip.com/s/meme/Philosoraptor.jpg" alt="Philosoraptor meme">
+											<img id="jackie-chan" src="https://imgflip.com/s/meme/Jackie-Chan-WTF.jpg" alt="Jackie Chan Why meme">
+									</div>
+								</div>
+							</form>
 						</div>
-						<div id="meme-container">
-						</div>	
+						<div id="meme-container"></div>
 					</section>
 					<div class="col-md-4">
 						<img src="karl-meme.jpg" alt="A meme, created with this meme generator, using Karl Secco's image from the About page: 'Is the boss of his cat, Every day is Opposite Day'">
@@ -131,6 +135,6 @@
 
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="meme.js"></script>
+	<script src="meme.js"></script>
 </body>
 </html>

@@ -266,6 +266,10 @@ hr {
   meme
 //////////////////////////////////////////////////*/
 
+#meme-form {
+  padding-bottom: 1rem;
+}
+
 #meme-form label {
   color: rgba(0,0,0,0.8);
 }
@@ -298,8 +302,26 @@ hr {
   margin-top: 1.5rem;
 }
 
+#thumnails {
+  text-align: center;
+}
+
+#meme-form .col-lg-12 img {
+  max-height: 90px;
+  margin: 1px;
+  border: 1px solid rgba(210,175,125,0.3);
+  border-radius: 5px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#meme-form .col-lg-12 img:hover {
+  opacity: 1;
+}
+
 #meme-container {
   margin: 20px 0;
+  padding: 0;
   width: 100%;
   text-align: center;
 }
@@ -386,8 +408,4 @@ hr {
 .meme-div:hover > button {
   width: 100%;
   height: 100%;
-}
-
-.meme-div:hover {
-  border: 1px solid white;
 }
