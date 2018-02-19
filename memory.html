@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="memory-bg">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Karl Secco | Memory Game</title>
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <div class="container">
+	  	<div>
+	  		<span class="nav-i-brand fas fa-terminal"></span>
+	  		<a class="navbar-brand" href="index.html">
+	  			Karl Secco
+	  	  </a>
+	  	</div>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+	  					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  	  <span class="navbar-toggler-icon"></span>
+	  	</button>
+	  	<div id="navbarNav" class="collapse navbar-collapse">
+	  	  <ul class="navbar-nav ml-auto">
+	  	    <li class="nav-item">
+	  	      <a class="nav-link" href="about.html">
+							<span class="nav-i fas fa-laptop"></span>
+							About
+	  	      </a>
+	  	    </li>
+	  	    <li class="nav-item">
+	  	      <a class="nav-link" href="meme.html">
+							<span class="nav-i far fa-images"></span>
+							Meme Generator
+	  	      </a>
+	  	    </li>
+	  	    <li class="nav-item">
+	  	      <a id="disabled2" class="nav-link disabled" href="#">
+							<span class="nav-i fas fa-gamepad"></span>
+							Memory Game
+						</a>
+	  	    </li>
+	  	    <li class="nav-item dropdown">
+		        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" 
+		        	 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          <span class="nav-i far fa-envelope"></span>
+		          Contact
+		        </a>
+		        <div id="dropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a id="resume" class="dropdown-item" href="contact.html">
+		          	<span class="nav-i far fa-list-alt"></span>
+		          	Resum&#233;
+		          </a>
+		          <a id="email" class="dropdown-item" href="mailto:karlsecco@gmail.com">
+		          	<span class="nav-i fas fa-at"></span>
+		          	Email
+		          </a>
+		          <a id="github" class="dropdown-item" href="https://github.com/ksecco">
+								<span class="nav-i fab fa-github"></span>
+								GitHub
+		          </a>
+		          <a id="disabled3" class="dropdown-item" href="#">
+								<span class="nav-i fab fa-linkedin"></span>
+								LinkedIn
+		          </a>
+	        </div>
+		      </li>
+	  	  </ul>
+	  	</div>
+	  </div>
+	</nav>
+
+	<main id="memory" class="container">
+		<section class="container">
+			<header class="row">
+				<div class="col-lg-12">
+					<h1>Memory Game</h1>
+				</div>
+			</header>
+			<section id="game">
+				<div class="row">
+					<hr>
+					<section class="col-md-12">
+						<button id="easy" class="game-btn">EASY</button>
+						<button id="medium" class="game-btn">MEDIUM</button>
+						<button id="hard" class="game-btn">HARD</button>
+					</section>
+					<section class="col-md-12 ml-auto">
+						<button id="reset" class="game-btn">Reset</button>
+						<p id="score" class="tracker">Score: <span id="score-count">0</span></p>
+						<p id="combo" class="tracker"></p>
+						<p id="lives" class="tracker">Lives: <span 	id="lives-count">9</span></p>
+					</section>
+				</div>
+			</section>
+			<section class='row'>
+						<div id="card-container" class="col-lg-12"></div>
+					</section>
+		</section>
+	</main>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="memory.js"></script>
+</body>
+</html>
